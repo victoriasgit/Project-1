@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+    <title>Админ-панель</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/admin.css?version=1">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="../images/icons/adminfavicon.png">
+    <script src="../scripts/jquery-min.js"></script>
+    <script src="../scripts/admin/texthighlighter/rangy-core.js"></script>
+    <script src="../scripts/admin/texthighlighter/jquery.texthighlighter.js"></script>
+    <script src="../scripts/admin/mediadescription.js"></script>
+    <script src="../scripts/admin/error.js"></script>
+    <script src="../scripts/admin/tags.js"></script>
+    <script src="../scripts/admin/aliasmaker.js"></script>
+    <script src="../scripts/admin/click-actions.js?version=1"></script>
+    <script src="../scripts/admin/images-actions.js?version=1"></script>
+    <script src="../scripts/admin/articles.js?version=1"></script>
+    <link rel="stylesheet" href="../../css/admin.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/font-awesome.min.css">
+    <link rel="stylesheet" href="../../css/admin.css">
+<body>
+<!-- header -->
+<header>
+    <div class="flex-row">
+        <div class="title">Вы вошли как <span id="moderator">superadmin</span></div>
+        <div class="buttons">
+            <a href="#">Выход</a>
+            <a href="">Статьи</a>
+
+        </div>
+    </div>
+</header>
+<!-- header КОНЕЦ -->
+
+<div class="holder type flex-container flex-col padding20">
+    <!-- Форма редактора -->
+    <div class="flex-row flex-full">
+        <div class="flex-col flex-half padding20">
+            <div class="input-row">
+                <label for="title">Название статьи</label>
+                <input type="text" id="title">
+            </div>
+        </div>
+        <div class="flex-col flex-half padding20">
+            <div class="input-row">
+                <label for="alias">URL страницы (без домена и /)</label>
+                <input type="text" id="alias">
+            </div>
+        </div>
+    </div>
+    <div class="flex-col flex-full padding20">
+        <label for="shortdescription">Краткое описание</label>
+        <textarea id="shortdescription"></textarea>
+    </div>
+    <div class="flex-col flex-full padding20">
+        <label for="article">Текст статьи</label>
+        <textarea id="article"></textarea>
+    </div>
+    <!-- Форма редактора КОНЕЦ -->
+
+    <!-- Кнопки -->
+    <div class="flex-col flex-full padding20">
+        <div class="buttons id-info flex-row flex-centered">
+            <div class="button green" id="edit-article">Сохранить</div>
+            <div class="button red" id="delete-article">Удалить</div>
+            <a href="articles.html" class="button">Отмена</a>
+            <div class="loader"></div>
+        </div>
+    </div>
+    <!-- Кнопки КОНЕЦ -->
+</div>
+</body>
+</html>
